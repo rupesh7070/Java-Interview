@@ -68,4 +68,6 @@ public class ArraysExample {
         int[] firstArray = {1, 2, 3, 4, 5};
         int[] secondArray = {3, 4, 5, 6, 7};
     }
+
+    //remove duplicated from unsorted array
 }
