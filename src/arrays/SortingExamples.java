@@ -60,14 +60,22 @@ public class SortingExamples {
         return numbers;
     }
 
-//insertion sort
 
-    public static int[] insertionSort(int[] numbers) {
-        int[] sortedArray = new int[numbers.length];
-        for(int i = 0; i < numbers.length; i++) {
+    public static int[] insertElementAtGivenPositionInArray(int pos, int numberToAdd, int[] oldArray) {
+        int[] newArray = new int[oldArray.length + 1];
 
+        for (int i = 0; i < pos; i++) {
+            newArray[i] = oldArray[i];
         }
-        return sortedArray;
+        newArray[pos] = numberToAdd;
 
+        for (int i = pos ; i < oldArray.length; i++) {
+            newArray[i + 1] = oldArray[i];
+        }
+
+        return newArray;
     }
+
 }
+
+
