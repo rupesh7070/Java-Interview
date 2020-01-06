@@ -52,4 +52,7 @@ public class ClinicCalendar {
 
    }
 
+   public List<PatientAppointment> displayFutureAppointment() {
+      return appointments.stream().filter(a -> a.getAppointmentDateTime().isAfter(LocalDateTime.now())).collect(Collectors.toList());
+   }
 }

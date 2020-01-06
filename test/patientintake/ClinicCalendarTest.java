@@ -3,6 +3,7 @@ package patientintake;
 import org.junit.jupiter.api.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
@@ -65,9 +66,15 @@ class ClinicCalendarTest {
     }
 
     @Test
-    void convertStringToDateTimeTest() {
+    @DisplayName("Display future appointment")
+    void shouldDisplayFutureAppointment(){
 
+        clinicCalendar.addAppointment("Jim", "Weaver", "avery",
+                "09/01/2022 2:00 pm");
+
+        assertNotNull(clinicCalendar.displayFutureAppointment());
     }
+
 
 
 }
